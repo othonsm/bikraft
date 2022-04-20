@@ -1,3 +1,7 @@
+#bicicleta .titulo p {
+  text-transform: uppercase;
+}
+
 .bicicleta {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -5,10 +9,6 @@
   gap: 40px;
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-#bicicleta .titulo p {
-  text-transform: uppercase;
 }
 
 .bicicleta-imagens {
