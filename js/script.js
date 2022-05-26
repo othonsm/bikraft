@@ -24,3 +24,4 @@ function ativarProduto(parametro) {
 
 parametros.forEach(ativarProduto);
 
+//
