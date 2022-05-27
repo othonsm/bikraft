@@ -24,4 +24,24 @@ function ativarProduto(parametro) {
 
 parametros.forEach(ativarProduto);
 
-//
+//Perguntas Frequentes
+const perguntas = document.querySelectorAll('.perguntas button'); //Item que quero selecionar
+
+//o que vai ocorrer depois de clicar
+function ativarPergunta(event) {
+  const pergunta = event.currentTarget;
+  const controls = pergunta.getAttribute("aria-controls")//pegar o id que está no aria-controls = id
+  const resposta = document.getElementById(controls);
+
+  resposta.classList.toggle("ativa");//adiciona a classe "ativa"
+  const ativa = resposta.classList.contains("ativa"); // Existe a classe ativa?
+  pergunta.setAttribute("aria-expanded", ativa);//mudando o que está false para true
+  
+}
+//Ação para o botão
+function eventosPerguntas(pergunta) {
+  pergunta.addEventListener("click", ativarPergunta);//evento de click
+}
+
+
+perguntas.forEach(eventosPerguntas); //qual evento eu quero selecionar
